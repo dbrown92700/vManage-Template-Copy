@@ -1,7 +1,26 @@
+#!/usr/bin/env python27
+# -*- coding: utf-8 -*-
+"""
+Copyright (c) {{current_year}} Cisco and/or its affiliates.
+
+This software is licensed to you under the terms of the Cisco Sample
+Code License, Version 1.0 (the "License"). You may obtain a copy of the
+License at
+
+               https://developer.cisco.com/docs/licenses
+
+All use of the material herein must be in accordance with the terms of
+the License. All rights not expressly granted by the License are
+reserved. Unless required by applicable law or agreed to separately in
+writing, software distributed under the License is distributed on an "AS
+IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+or implied.
+"""
+
 import json
 import requests
 
-# Parameters for system to copy FROM
+__author__ = "David Brown <davibrow@cisco.com>"
 
 ##################################################################################
 # Return the Org name by parsing the vSmart config
@@ -249,8 +268,8 @@ permenantly.
 
 Key points about the script:
 ----------------------------
-- You can edit the variables at the beginning of the script to save your server information
-  permanently.
+- The scipt prompts the user for server and credential information. It saves this
+  information in the users local directory for future runs.
 - It will parse the device template for all Feature Template dependancies and copy the
   neccessary Feature Templates to the target system.
 - The script compares only template names to determine if a Device or Feature Template
